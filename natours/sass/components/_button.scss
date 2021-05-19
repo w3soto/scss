@@ -1,0 +1,93 @@
+
+
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        position: relative;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        display: inline-block;
+        transition: all .05s ease-in;
+
+        border: none;
+        cursor: pointer;
+    }
+
+    // move up
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem $color-box-shadow;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem $color-box-shadow;
+    }
+
+    // wow effect
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background-color: inherit;
+        transition: all .4s ease-out;
+    }
+    &:hover:after {
+        background-color:  inherit;
+        opacity: 0;
+        transform: scaleX(1.4) scaleY(1.6);
+    }
+
+    // modifications
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+    }
+
+    &--primary {
+        background-color: $color-primary;
+        color: #fff;
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        display: inline-block;
+        text-decoration: none;
+        color: $color-primary;
+        padding: .3rem .6rem;
+        border-bottom: solid 1px $color-primary;
+        transition: all .2s ease-out;
+    }
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        transform: translateY(-.2rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 1rem 1rem rgba($color-black, .2);
+    }
+}

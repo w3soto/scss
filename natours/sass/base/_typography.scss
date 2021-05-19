@@ -1,0 +1,78 @@
+
+body {
+    font-family: "Lato", sens-serif;
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 1.7;
+    color: $color-bg;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    /* fix animation shakes */
+    backface-visibility: hidden;
+    /* margin for button */
+    margin-bottom: 6rem;
+
+    &__main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        /* fix space after last char modified by letter-spacing */
+        text-indent: -3.5rem;
+        direction:rtl;
+        /* intro animation*/
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        /*animation-direction: reverse;*/
+        /*animation-iteration-count: 3;*/
+        /*animation-delay: 1s;*/
+    }
+
+    &__sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.74rem;
+        /* fix space after last char modified by letter-spacing */
+        text-indent:-1.74rem;
+        direction:rtl;
+        /* intro animation*/
+        animation: moveInRight 1s ease-out;
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    cursor: default;
+    letter-spacing: 0.2rem;
+
+    // gradient text color
+    @include text-gradient($color-primary-light, $color-primary-dark);
+        
+    // animation
+    transition: all .2s ease-in-out;
+    &:hover {
+        transform: skewY(2deg) skewX(15deg);
+        text-shadow: .5rem 1rem 2rem rgba(0,0,0,.2);
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
