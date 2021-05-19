@@ -1,0 +1,56 @@
+
+.footer {
+    grid-column: full-start / full-end;
+    padding: 6rem 6rem 6rem;
+    background-color: $color-secondary;
+}
+
+.nav {
+    list-style: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    // grid-gap: 2rem;
+    // align-content: center;
+    // align-items: center;
+
+    &__item {
+        color: $color-grey-light-1;
+        font-size: 1.4rem;
+        font-family: $font-display;
+        padding: .75rem 1.5rem;
+        //margin: .5rem 1rem; 
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all .2s ease-out;
+
+        &:hover {
+            box-shadow: 0 1rem 1rem rgba(0,0,0,.1);
+            background-color: rgba(#fff, .05);
+            backface-visibility: hidden;
+            transform: translateY(-.2rem); 
+        }
+
+        // &:first-child {
+        //     margin-left: 0;
+        // }
+        // &:last-child {
+        //     margin-right: 0;
+        // }
+    }
+}
+
+.copy {
+    color:  $color-grey-light-2;
+    width: 50%;
+    font-size: 1.4rem;
+    margin: 6rem auto 0;
+    text-align: center;
+}
